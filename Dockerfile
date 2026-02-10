@@ -12,8 +12,12 @@ RUN apt-get update && apt-get install -y \
 
 COPY requirements.txt .
 
-RUN pip install --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip setuptools wheel
+
+# CRITICAL FIX for HF + Whisper
+RUN pip install --no-build-isolation openai-whisper==20231117
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
