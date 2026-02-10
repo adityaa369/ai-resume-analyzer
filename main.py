@@ -402,26 +402,5 @@ def get_html_report():
         return jsonify({"success": False, "error": str(e)}), 500
 
 if __name__ == '__main__':
-    print("\n" + "="*70)
-    print("🚀 Smart AI Resume Analyzer & Video Interviewer")
-    print("="*70)
-    print("📱 Server starting at http://localhost:5000")
-    print("\n⚡ Key Features:")
-    print("   ✅ Resume parsing and skill extraction")
-    print("   ✅ Video/Audio recording with FAST transcription")
-    print("   ✅ Exactly 10 questions covering all your skills")
-    print("   ✅ AI-powered answer evaluation")
-    print("   ✅ Models preloaded - NO DELAYS during interview")
-    print("   ✅ Comprehensive performance reports")
-    print("\n🔥 OPTIMIZATIONS:")
-    print("   ⚡ Models loaded at startup (one-time)")
-    print("   ⚡ No loading delays between questions")
-    print("   ⚡ Fast video processing (5-10 seconds)")
-    print("   ⚡ Auto camera permissions on interview start")
-    print("   ⚡ Improved skill detection (15 skills vs 5)")
-    print("   ⚡ Smart question distribution (1 per skill)")
-    print("="*70 + "\n")
-    
-    # Run the application
-    app.run(debug=False)
+    app.run(host="0.0.0.0", port=7860, debug=False)
     
